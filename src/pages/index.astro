@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+// Import your profile picture
+import profilePic from "../scottpic.png";
+---
+
+<Layout title="Home">
+  <main class="flex flex-col h-full items-center justify-evenly p-24">
+    <div class="profile-img">
+      <Image src={profilePic} alt="Scott Ball" class="rounded-full w-48 h-48" />
+    </div>
+    <h1 class="text-5xl font-semibold">Scott Ball</h1>
+    <p class="-mt-10 text-3xl font-semibold">Software Developer</p>
+    <div class="space-x-10 flex flex-row">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="mailto:scotttball@gmail.com"
+        class="flex items-center text-white hover:text-gray-300"
+      >
+        <Icon name="bxl:gmail" />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/ballscott/"
+        class="flex items-center text-white hover:text-gray-300"
+      >
+        <Icon name="fa6-brands:linkedin" />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/scotttball"
+        class="flex items-center text-white hover:text-gray-300"
+      >
+        <Icon name="fa6-brands:github" />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.facebook.com/scotttball"
+        class="flex items-center text-white hover:text-gray-300"
+      >
+        <Icon name="fa6-brands:facebook" />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://twitter.com/scotttball"
+        class="flex items-center text-white hover:text-gray-300"
+      >
+        <Icon name="fa6-brands:x-twitter" />
+      </a>
+    </div>
+  </main>
+</Layout>
